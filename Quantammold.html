@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Quantam Mold • 3D Printing</title>
+<style>
+/* 🔹 THEME VARIABLES */
+:root{--bg:#030B08;--fg:#fff;--accent:#0ff;--accent2:#ff0;}
+.dark{--bg:#fff;--fg:#000;--accent:#06f;--accent2:#fa0;}
+
+/* 🔹 RESET */
+*,*:before,*:after{box-sizing:border-box;margin:0;padding:0;}
+html,body{height:100%;font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;background:var(--bg);color:var(--fg);scroll-behavior:smooth;overflow-x:hidden;}
+
+/* 🔹 HEADER */
+header{position:sticky;top:0;z-index:80;background:var(--bg);display:flex;justify-content:space-between;align-items:center;padding:1rem 1.5rem;border-bottom:1px solid #123;}
+.logo{font-size:1.8rem;font-weight:700;color:var(--accent);text-shadow:0 0 8px var(--accent);}nav a{color:var(--accent2);margin-left:1.2rem;font-weight:600;text-decoration:none;}nav a:hover{background:var(--accent2);color:var(--bg);padding:.2rem .5rem;border-radius:6px;}
+#themeToggle{border:none;background:none;color:var(--accent2);font-size:1.3rem;cursor:pointer;}
+
+/* 🔹 HERO & SECTIONS */
+.section{position:relative;display:flex;align-items:center;justify-content:center;text-align:center;min-height:100vh;padding:4rem 1rem;}
+.parallax{background-attachment:fixed;background-size:cover;background-position:center;}
+.overlay::before{content:"";position:absolute;inset:0;background:rgba(0,0,0,.55);z-index:0;}
+.content{position:relative;z-index:1;max-width:800px;margin:auto;}
+
+/* 🔹 TYPOGRAPHY */
+.neon{font-size:clamp(2.5rem,5vw,4rem);font-weight:700;letter-spacing:2px;color:var(--accent);text-shadow:0 0 6px var(--accent),0 0 12px var(--accent);animation:flicker 2s infinite alternate;}@keyframes flicker{0%,18%,22%,25%,53%,57%,100%{opacity:1;}20%,24%,55%{opacity:.4;}}
+
+/* 🔹 BUTTON */
+.btn{display:inline-block;margin-top:1.5rem;padding:.8rem 2.2rem;border:2px solid var(--accent2);color:var(--accent2);font-size:1.1rem;border-radius:50px;cursor:pointer;text-decoration:none;font-weight:600;text-shadow:0 0 4px var(--accent2);transition:.3s;} .btn:hover,.btn.active{background:var(--accent2);color:var(--bg);box-shadow:0 0 10px var(--accent2),0 0 20px var(--accent2);} 
+
+/* 🔹 SERVICE CARDS */
+.services{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));margin-top:2rem;}
+.card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);padding:1.5rem;border-radius:18px;backdrop-filter:blur(8px);box-shadow:0 0 8px rgba(0,255,255,.25);transition:.3s;cursor:default;}
+.card:hover{transform:translateY(-6px);box-shadow:0 0 14px var(--accent),0 0 28px var(--accent);} .card h3{color:var(--accent);margin-bottom:.4rem;text-shadow:0 0 5px var(--accent);} .card.glow{animation:glow 2s infinite alternate;}@keyframes glow{0%{box-shadow:0 0 12px var(--accent);}100%{box-shadow:0 0 30px var(--accent);}}
+
+/* 🔹 REVEAL */
+.reveal{opacity:0;transform:translateY(40px);} .reveal.show{animation:fadeUp .7s ease forwards;}@keyframes fadeUp{to{opacity:1;transform:translateY(0);}}
+
+/* 🔹 FOOTER */
+footer{background:url(https://img.freepik.com/free-vector/abstract-neon-lights-background-design_52683-44643.jpg?semt=ais_hybrid&w=740) center/cover;padding:2rem 1rem;text-align:center;border-top:1px solid #222;font-size:.9rem;color:#aaa;}
+
+/* 🔹 BACK‑TO‑TOP */
+#backToTop{position:fixed;bottom:30px;right:30px;background:var(--accent);color:var(--bg);padding:.65rem .9rem;border-radius:28px;font-weight:700;font-size:1rem;display:none;box-shadow:0 0 14px var(--accent);cursor:pointer;z-index:90;transition:.3s;}#backToTop:hover{background:#00cccc;color:#fff;}
+
+/* 🔹 RESPONSIVE */
+@media(max-width:680px){nav a{margin-left:.6rem;}#backToTop{bottom:20px;right:20px;padding:.5rem .8rem;font-size:.9rem;}}
+</style>
+</head>
+<body>
+<header>
+ <div class="logo">Quantam Mold</div>
+ <nav>
+   <button id="themeToggle" aria-label="Toggle theme">☀️/🌙</button>
+   <a href="#services">Services</a>
+   <a href="#contact">Contact</a>
+   <a href="Catalogpg.html" target="_blank">Catalog 🡕</a>
+ </nav>
+</header>
+<!-- HERO -->
+<section class="section parallax overlay" style="background-image:url('https://images.unsplash.com/photo-1581093588401-918d5b78b025?auto=format&fit=crop&w=1740&q=80');">
+ <div class="content reveal">
+  <h1 class="neon">QUANTAM MOLD</h1>
+  <p style="margin-top:1rem;font-size:1.25rem;">Custom prints • Buy at lunch • Quote‑based 3D printing</p>
+  <a href="Catalogpg.html" class="btn">Browse Catalog</a>
+ </div>
+</section>
+<!-- SERVICES -->
+<section id="services" class="section" style="background:url(https://img.freepik.com/free-vector/abstract-neon-lights-background-design_52683-44643.jpg?semt=ais_hybrid&w=740) center/cover;">
+ <div class="content reveal">
+  <h2 class="neon" style="font-size:3rem;">Our Services</h2>
+  <div class="services">
+   <div class="card reveal"><h3>Catalog</h3><p>Select from our library of tried‑and‑true prints.</p></div>
+   <div class="card reveal"><h3>Custom Orders</h3><p>Send us any Printables/Thingiverse link—get a tailored quote.</p></div>
+  </div>
+ </div>
+</section>
+<!-- GALLERY BLURB -->
+<section class="section parallax overlay" style="background-image:url('https://images.unsplash.com/photo-1518557958270-9834b35b3cb7?auto=format&fit=crop&w=1740&q=80');">
+ <div class="content reveal"><h2 class="neon" style="font-size:3rem;">Catch us at lunch every other day!</h2></div>
+</section>
+<!-- CONTACT -->
+<section id="contact" class="section" style="background:var(--bg);">
+ <div class="content reveal">
+  <h2 class="neon" style="font-size:3rem;">Get a Quote</h2>
+  <p style="margin:1rem 0;font-size:1.1rem;">Email&nbsp;<a href="mailto:lleungqwerty@gmail.com" style="color:var(--accent);">lleungqwerty@gmail.com</a> or&nbsp;<a href="mailto:kmalhotra@greenhillsschool.org" style="color:var(--accent);">kmalhotra@greenhillsschool.org</a></p>
+  <a href="https://www.surveylegend.com/s/5zwx" class="btn" target="_blank" rel="noopener">3D Printing Form</a>
+ </div>
+</section>
+<footer><p>&copy; 2025 Quantam Mold. All rights reserved.</p></footer>
+<button id="backToTop" aria-label="Back to top">↑ Top</button>
+
+<script>
+// Theme toggle
+const tBtn=document.getElementById('themeToggle');tBtn.onclick=()=>document.body.classList.toggle('dark');
+// Card glow toggle
+document.querySelectorAll('.card').forEach(c=>c.addEventListener('click',()=>c.classList.toggle('glow')));
+// Back‑to‑top visibility
+const topBtn=document.getElementById('backToTop');window.addEventListener('scroll',()=>{topBtn.style.display=window.scrollY>innerHeight/2?'block':'none';});topBtn.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
+// Reveal on scroll
+const obs=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('show');obs.unobserve(x.target);}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
